@@ -44,6 +44,8 @@ namespace InternetShopDAL.Repositories
             var i = db.Products.FirstOrDefault(c => c.Id == item.Id);
             if (i != null)
             {
+                db.Products.Attach(i);
+
                 i.Images = item.Images;
                 i.Price = item.Price;
                 i.Producer = item.Producer;
@@ -52,7 +54,7 @@ namespace InternetShopDAL.Repositories
                 i.Category = item.Category;
                 i.Count = item.Count;
                 i.Description = item.Description;
-                i.DescriptionId = item.DescriptionId;
+                //i.DescriptionId = item.DescriptionId;
             }
         }
     }

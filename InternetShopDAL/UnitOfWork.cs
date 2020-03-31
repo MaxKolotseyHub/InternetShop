@@ -15,8 +15,10 @@ namespace InternetShopDAL
         private CategoryRepository categoryRepository;
         private ProducerRepository producerRepository;
         private ProductRepository productRepository;
+        private ClientRepository clientRepository;
+        private PurchaseRepository purchaseRepository;
         private ImageRepository imagesRepository;
-        private DescriptionRepository descriptionRepository;
+        //private DescriptionRepository descriptionRepository;
         public UnitOfWork(string connectionString)
         {
             db = new DatabaseContext(connectionString);
@@ -31,15 +33,7 @@ namespace InternetShopDAL
             }
         }
 
-        public IRepository<Description> Descriptions
-        {
-            get
-            {
-                if (descriptionRepository == null)
-                    descriptionRepository = new DescriptionRepository(db);
-                return descriptionRepository;
-            }
-        }
+
 
         public IRepository<Image> Images
         {
@@ -70,6 +64,25 @@ namespace InternetShopDAL
             }
         }
 
+        public IRepository<Client> Clients
+        {
+            get
+            {
+                if (clientRepository == null)
+                    clientRepository = new ClientRepository(db);
+                return clientRepository;
+            }
+        }
+
+        public IRepository<Purchase> Purchases
+        {
+            get
+            {
+                if (purchaseRepository == null)
+                    purchaseRepository = new PurchaseRepository(db);
+                return purchaseRepository;
+            }
+        }
         public void Save()
         {
             db.SaveChanges();

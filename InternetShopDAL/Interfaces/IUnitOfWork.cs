@@ -10,7 +10,8 @@ namespace InternetShopDAL.Interfaces
     public interface IUnitOfWork
     {
         IRepository<Category> Categories { get; }
-        IRepository<Description> Descriptions { get; }
+        IRepository<Client> Clients { get; }
+        IRepository<Purchase> Purchases { get; }
         IRepository<Image> Images { get; }
         IRepository<Producer> Producers { get; }
         IRepository<Product> Products { get; }

@@ -44,6 +44,7 @@ namespace InternetShopDAL.Repositories
             var i = db.Images.FirstOrDefault(c => c.Id == item.Id);
             if (i != null)
             {
+                db.Images.Attach(i);
                 i.Product = item.Product;
                 //i.ProductId = item.ProductId;
                 i.Path = item.Path;

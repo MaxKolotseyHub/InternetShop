@@ -43,8 +43,8 @@ namespace InternetShopDAL.Repositories
         {
             var i = db.Producers.FirstOrDefault(c => c.Id == item.Id);
             if (i != null)
-            {
-                i.Product = item.Product;
+            { 
+                db.Producers.Attach(i);
                 //i.ProductId = item.ProductId;
                 i.Name = item.Name;
             }
