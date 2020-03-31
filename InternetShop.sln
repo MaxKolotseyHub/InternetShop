@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetShopBLL", "Internet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetShopAL", "InternetShopAL\InternetShopAL.csproj", "{AD99566F-76F6-4166-9694-C4B24D2959BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetShopApConsole", "InternetShopApConsole\InternetShopApConsole.csproj", "{6DB263B2-44F0-4F20-A31C-29B21C4F11D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AD99566F-76F6-4166-9694-C4B24D2959BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD99566F-76F6-4166-9694-C4B24D2959BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD99566F-76F6-4166-9694-C4B24D2959BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB263B2-44F0-4F20-A31C-29B21C4F11D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB263B2-44F0-4F20-A31C-29B21C4F11D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB263B2-44F0-4F20-A31C-29B21C4F11D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB263B2-44F0-4F20-A31C-29B21C4F11D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,7 +11,7 @@ namespace InternetShopDAL.Models
     {
         public Product()
         {
-            //Images = new List<Images>();
+            Images = new List<Image>();
         }
         public int Id { get; set; }
         public string Title { get; set; }
@@ -23,6 +23,6 @@ namespace InternetShopDAL.Models
         public virtual Category Category { get; set; }
         public virtual Description Description { get; set; }
         public virtual Producer Producer { get; set; }
-        public virtual Image Images { get; set; }
+        public virtual List<Image> Images { get; set; }
     }
 }

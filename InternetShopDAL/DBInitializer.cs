@@ -23,7 +23,7 @@ namespace InternetShopDAL
                 Producer = producer,
                 Count = 5,
                 Description = description,
-                Images = images,
+                Images = new List<Image> { images },
                 Price = 47.2,
             };
             context.Products.Add(product);

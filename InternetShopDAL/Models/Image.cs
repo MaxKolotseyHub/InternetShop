@@ -10,9 +10,9 @@ namespace InternetShopDAL.Models
 {
     public class Image
     {
-        [Key, ForeignKey("Product")]
         public int Id { get; set; }
         public string Path { get; set; }
-        public virtual Product Product { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
     }
 }
