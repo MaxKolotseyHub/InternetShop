@@ -41,7 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IProductService.cs" />
+    <Compile Include="Models\CategoryBLL.cs" />
+    <Compile Include="Models\ClientBLL.cs" />
+    <Compile Include="Models\ImageBLL.cs" />
+    <Compile Include="Models\ProducerBLL.cs" />
+    <Compile Include="Models\ProductBLL.cs" />
+    <Compile Include="Models\PurchaseBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InternetShopDAL\InternetShopDAL.csproj">
+      <Project>{72db4290-d65c-4b21-aaf8-2e457f133e64}</Project>
+      <Name>InternetShopDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
