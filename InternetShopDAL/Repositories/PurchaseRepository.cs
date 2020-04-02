@@ -41,16 +41,16 @@ namespace InternetShopDAL.Repositories
 
         public void Update(Purchase item)
         {
-            var i = db.Purchases.FirstOrDefault(c => c.Id == item.Id);
+            //var i = db.Purchases.FirstOrDefault(c => c.Id == item.Id);
 
-            if (i != null)
-            {
-                db.Purchases.Attach(i);
-                i.DateTime = item.DateTime;
-                i.Client = item.Client;
-                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
+            //if (i != null)
+            //{
+            //    db.Purchases.Attach(i);
+            //    i.DateTime = item.DateTime;
+            //    i.Client = item.Client;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
 
-            }
+            //}
         }
     }
 }

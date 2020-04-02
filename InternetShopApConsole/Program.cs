@@ -83,6 +83,16 @@ namespace InternetShopApConsole
             };
 
             purchaseService.CreatePurchase(cart, client);
+
+            products = productService.GetAllProducts();
+
+            Console.WriteLine("\tСписок товаров");
+            Console.WriteLine("------------------------");
+
+            products.ForEach(x =>
+            Console.WriteLine($"{x.Id}. {x.Title} {x.Count} шт.")
+            );
+
             Console.ReadKey();
         }
     }

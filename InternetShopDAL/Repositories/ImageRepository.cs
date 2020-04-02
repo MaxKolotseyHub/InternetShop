@@ -41,16 +41,16 @@ namespace InternetShopDAL.Repositories
 
         public void Update(Image item)
         {
-            var i = db.Images.FirstOrDefault(c => c.Id == item.Id);
-            if (i != null)
-            {
-                db.Images.Attach(i);
-                i.Product = item.Product;
-                //i.ProductId = item.ProductId;
-                i.Path = item.Path;
-                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
+            //var i = db.Images.FirstOrDefault(c => c.Id == item.Id);
+            //if (i != null)
+            //{
+            //    db.Images.Attach(i);
+            //    i.Product = item.Product;
+            //    //i.ProductId = item.ProductId;
+            //    i.Path = item.Path;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
 
-            }
+            //}
         }
     }
 }

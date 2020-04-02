@@ -41,17 +41,17 @@ namespace InternetShopDAL.Repositories
 
         public void Update(Client item)
         {
-            var i = db.Clients.FirstOrDefault(c => c.Id == item.Id);
-            if (i != null)
-            {
-                db.Clients.Attach(i);
-                i.LastName = item.LastName;
-                i.MobilePhoneNumber = item.MobilePhoneNumber;
-                i.FirstName = item.FirstName;
-                i.Adress = item.Adress;
-                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
+            //var i = db.Clients.FirstOrDefault(c => c.Id == item.Id);
+            //if (i != null)
+            //{
+            //    db.Clients.Attach(i);
+            //    i.LastName = item.LastName;
+            //    i.MobilePhoneNumber = item.MobilePhoneNumber;
+            //    i.FirstName = item.FirstName;
+            //    i.Adress = item.Adress;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
 
-            };
+            //};
         }
     }
 }
