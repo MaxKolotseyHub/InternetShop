@@ -30,6 +30,11 @@ namespace InternetShopBLL.Services
             unitOfWork.Products.Update(mapper.Map<Product>(product));
         }
 
+        public List<Category> GetAllCategories()
+        {
+            return (List<Category>) unitOfWork.Categories.GetAll();
+        }
+
         public List<Product> GetAllProducts()
         {
             return (List<Product>) unitOfWork.Products.GetAll();
@@ -38,6 +43,14 @@ namespace InternetShopBLL.Services
         public Product GetProduct(int Id)
         {
             return unitOfWork.Products.GetItemById(Id);
+        }
+
+        public List<Product> GetProductsInCategory(int Id)
+        {
+            var products = GetAllProducts();
+            var category = unitOfWork.Categories.GetItemById(Id);
+
+            return products.FindAll(x=>x.Category == category);
         }
     }
 }

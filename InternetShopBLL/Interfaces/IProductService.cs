@@ -13,5 +13,7 @@ namespace InternetShopBLL.Interfaces
         List<Product> GetAllProducts();
         Product GetProduct(int Id);
         void BuyProduct(int Id, long Count);
+        List<Category> GetAllCategories();
+        List<Product> GetProductsInCategory(int Id);
     }
 }
