@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace InternetShopBLL.Interfaces
 {
-    public interface IProductService
+    public interface IPurchaseService
     {
-        List<Product> GetAllProducts();
-        Product GetProduct(int Id);
-        void BuyProduct(int Id, long Count);
+        void CreatePurchase(Dictionary<Product, int> CartProducts, Client client);
     }
 }

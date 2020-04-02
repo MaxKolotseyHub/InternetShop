@@ -49,6 +49,8 @@ namespace InternetShopDAL.Repositories
                 i.MobilePhoneNumber = item.MobilePhoneNumber;
                 i.FirstName = item.FirstName;
                 i.Adress = item.Adress;
+                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
+
             };
         }
     }

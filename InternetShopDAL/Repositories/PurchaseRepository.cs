@@ -48,6 +48,8 @@ namespace InternetShopDAL.Repositories
                 db.Purchases.Attach(i);
                 i.DateTime = item.DateTime;
                 i.Client = item.Client;
+                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
+
             }
         }
     }

@@ -48,6 +48,8 @@ namespace InternetShopDAL.Repositories
                 i.Product = item.Product;
                 //i.ProductId = item.ProductId;
                 i.Path = item.Path;
+                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
+
             }
         }
     }

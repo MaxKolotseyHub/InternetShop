@@ -45,7 +45,6 @@ namespace InternetShopDAL.Repositories
             if (i != null)
             {
                 db.Products.Attach(i);
-
                 i.Images = item.Images;
                 i.Price = item.Price;
                 i.Producer = item.Producer;
@@ -54,6 +53,8 @@ namespace InternetShopDAL.Repositories
                 i.Category = item.Category;
                 i.Count = item.Count;
                 i.Description = item.Description;
+
+                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
                 //i.DescriptionId = item.DescriptionId;
             }
         }

@@ -47,6 +47,8 @@ namespace InternetShopDAL.Repositories
                 db.Producers.Attach(i);
                 //i.ProductId = item.ProductId;
                 i.Name = item.Name;
+                db.Entry(i).State = System.Data.Entity.EntityState.Modified;
+
             }
         }
     }

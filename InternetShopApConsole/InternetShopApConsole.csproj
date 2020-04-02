@@ -61,6 +61,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InternetShopBLL\InternetShopBLL.csproj">
+      <Project>{398DA387-1622-4460-94F4-29084A08B967}</Project>
+      <Name>InternetShopBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InternetShopDAL\InternetShopDAL.csproj">
       <Project>{72db4290-d65c-4b21-aaf8-2e457f133e64}</Project>
       <Name>InternetShopDAL</Name>
